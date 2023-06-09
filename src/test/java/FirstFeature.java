@@ -13,7 +13,7 @@ public class FirstFeature extends BaseTest {
     @Order(1)
     public void firstScenario() {
         homePage = new HomePage(driver);
-        homePage.search("telefon");
+        homePage.search("laptop");
 
     }
 
