@@ -1,0 +1,16 @@
+{
+  "baseUrls": {
+    "webSiteUrl": "https://www.amazon.com.tr/"
+  },
+  "web": {
+    "browsers": {
+      "default": {
+        "type": "chrome",
+        "language": "en",
+        "headless": false
+      }
+    },
+    "pageLoadTimeout": 45,
+    "elementTimeout": 45
+  }
+}

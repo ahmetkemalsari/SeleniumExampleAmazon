@@ -10,7 +10,7 @@ public class HomePage extends BasePage {
         super(driver);
     }
 
-    private JsonHelper elementMap = new JsonHelper("src/main/resources/pages/home.json");
+    private JsonHelper elementMap = new JsonHelper("src/test/resources/config/pages/home.json");
 
     public By locator(String key){
         return elementMap.getElementSelector(key);
@@ -18,9 +18,14 @@ public class HomePage extends BasePage {
 
 
 
-    public void search(String searchValur){
-        type(locator("search input"),searchValur);
+    public void search(String searchValue){
+        type(locator("search input"),searchValue);
         click(locator("search button"));
+        try {
+            Thread.sleep(20000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
 
