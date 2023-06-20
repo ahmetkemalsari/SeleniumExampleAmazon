@@ -1,6 +1,0 @@
-helper/ConfigReader.java
- helper.ConfigReader
-FirstFeature.java
- FirstFeature
-BaseTest.java
- BaseTest
