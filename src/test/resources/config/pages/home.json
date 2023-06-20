@@ -4,6 +4,8 @@
   "loadTimeout": 10,
   "elements": {
     "search input": "//input[@id='twotabsearchtextbox']",
-    "search button" : "//input[@id='nav-search-submit-button']"
+    "search button" : "//input[@id='nav-search-submit-button']",
+    "accept cookies button" : "//input[@id='sp-cc-accept']",
+    "search result items" : "//div[@data-component-type='s-search-result']"
   }
 }

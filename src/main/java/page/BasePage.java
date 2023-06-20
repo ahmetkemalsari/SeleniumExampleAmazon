@@ -47,9 +47,15 @@ public class BasePage {
         return currentPage.equals(expectedUrl);
     }
 
-    public void scrollElement(By locator){
-        WebElement element = driver.findElement(locator);
+    public void scrollElementByLocator(By locator){
 
+            WebElement  webElement = driver.findElement(locator);
+
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})", webElement);
+
+    }
+    public void scrollElement(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})", element);
     }
@@ -83,6 +89,17 @@ public class BasePage {
 
     }
 
+    public static void staticWait(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+    public void clickByText(String text) {
+        WebElement element = driver.findElement(By.xpath("//*[text()='" + text + "']"));
+        element.click();
+    }
     public boolean isElementPresent(By locator) {
         return driver.findElements(locator).size() > 0;
     }

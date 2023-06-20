@@ -38,10 +38,6 @@ public class ConfigReader {
                 .getAsJsonObject("default").get("headless").getAsBoolean();
     }
 
-    public String[] getDefaultArguments() {
-        return gson.fromJson(config.getAsJsonObject("web").getAsJsonObject("browsers")
-                .getAsJsonObject("default").get("arguments").getAsJsonArray(), String[].class);
-    }
 
     public int getPageLoadTimeout() {
         return config.getAsJsonObject("web").get("pageLoadTimeout").getAsInt();

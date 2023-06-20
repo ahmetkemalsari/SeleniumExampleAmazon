@@ -23,14 +23,12 @@ public class BaseTest {
         int pageLoadTimeout = configReader.getPageLoadTimeout();
         int elementLoadTimeout = configReader.getElementTimeout();
         boolean isHeadless = configReader.isHeadless();
-        String[] defaultArguments = configReader.getDefaultArguments();
 
         WebDriverManager.chromedriver().setup();
 
 
         if (defaultBrowserType.equalsIgnoreCase("chrome")) {
             ChromeOptions options = new ChromeOptions();
-            options.addArguments(defaultArguments);
             options.addArguments("--lang=" + language);
             options.setHeadless(isHeadless);
             driver = new ChromeDriver(options);
@@ -41,7 +39,6 @@ public class BaseTest {
         }
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(pageLoadTimeout).toMillis(), TimeUnit.MILLISECONDS);
 
-        // Eleman yükleme zaman aşımı ayarı (5 saniye)
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(elementLoadTimeout).toMillis(), TimeUnit.MILLISECONDS);
 
 

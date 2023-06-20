@@ -11,11 +11,14 @@ public class FirstFeature extends BaseTest {
 
     @Test
     @Order(1)
-    public void firstScenario() {
+    public void searchProductTest() {
         homePage = new HomePage(driver);
-        homePage.search("laptop");
+        homePage.search("telefon");
+        homePage.selectRandomElement();
+
 
     }
+
 
 }
 
