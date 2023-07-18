@@ -13,8 +13,10 @@ public class FirstFeature extends BaseTest {
     @Order(1)
     public void searchProductTest() {
         homePage = new HomePage(driver);
-        homePage.search("telefon");
+        homePage.search("laptop");
         homePage.selectRandomElement();
+        homePage.staticWait(10);
+
 
 
     }

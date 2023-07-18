@@ -1,0 +1,7 @@
+{
+  "uriPath": "https://restful-booker.herokuapp.com/booking/1199",
+  "method": "GET",
+  "headers": {
+    "Authorization": ""
+  }
+}

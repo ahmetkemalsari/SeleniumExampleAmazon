@@ -37,10 +37,6 @@ public class BasePage {
         return find(locator).isDisplayed();
     }
 
-    public void wait(By locator,int time){
-        WebDriverWait wait = new WebDriverWait(driver, time);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-    }
 
     public boolean isTruePage(String expectedUrl) {
         String currentPage = driver.getCurrentUrl();
