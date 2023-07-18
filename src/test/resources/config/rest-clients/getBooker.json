@@ -1,5 +1,5 @@
 {
-  "uriPath": "https://restful-booker.herokuapp.com/booking/1199",
+  "uriPath": "https://restful-booker.herokuapp.com/booking/{the my id}",
   "method": "GET",
   "headers": {
     "Authorization": ""
